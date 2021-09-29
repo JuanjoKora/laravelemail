@@ -14,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('test'); //que es el formulario de contacto
 });
+
+//ruta a la que está señalando el formulario de contacto
+Route::post("/contactar", "App\Http\Controllers\EmailController")->name("contact");
