@@ -16,7 +16,7 @@
             background-color: white;
             border-radius: 5px;
             padding: 1rem;
-            width: 30%;
+            width: 20%;
             text-align: left;
             -webkit-box-shadow: 1px 3px 10px 2px rgba(0, 0, 0, 0.78); 
             box-shadow: 1px 3px 10px 2px rgba(0, 0, 0, 0.78);
@@ -24,11 +24,16 @@
 
         h2, .boton {
             text-align: center;
+            font-weight: bold;
         }
 
         label {
             font-weight: bold;
             font-style: italic;
+        }
+
+        textarea, input {
+            width: 100%;
         }
     </style>
 </head>
