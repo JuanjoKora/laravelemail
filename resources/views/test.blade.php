@@ -4,9 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Contacto</title>
     {{-- cdn de la librería de Bootstrap 4 --}}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: darkred
+        }
+        .container {
+            margin: 100px auto;
+            background-color: white;
+            border-radius: 5px;
+            padding: 1rem;
+            width: 30%;
+            text-align: left;
+            -webkit-box-shadow: 1px 3px 10px 2px rgba(0, 0, 0, 0.78); 
+            box-shadow: 1px 3px 10px 2px rgba(0, 0, 0, 0.78);
+        }
+
+        h2, .boton {
+            text-align: center;
+        }
+
+        label {
+            font-weight: bold;
+            font-style: italic;
+        }
+    </style>
 </head>
 <body>
     
@@ -16,14 +40,16 @@
             {{ csrf_field() }}
             <div class="form-group">
                 <label for="name">Nombre: </label>
+                <br>
                 <input type="text" name="name">
             </div>
             <div class="form-group">
                 <label for="msg">Mensaje: </label>
+                <br>
                 <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
             </div>
-            <div class="form-group">
-                <input type="submit" class="btn btn-contact" id="btn-contact" value="Enviar">
+            <div class="form-group boton">
+                <input type="submit" class="btn btn-info" id="btn-contact" value="Enviar">
             </div>
         </form>
     </div>
