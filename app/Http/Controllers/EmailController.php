@@ -9,12 +9,11 @@ use Mail; //importante incluir la clase Mail ya que será la responsable de envi
 class EmailController extends Controller
 {
     public function contact(Request $request) {
-        
-        Mail::send("email", $request->all(), function($msg) {
-            $subject = "Asunto del correo";
-            $for = "Correo que recibirá el mensaje";
-
-            $msg->from("tucorreo@gmail.com", "Nombre que aparecerá como emisor");
+        $subject = "Correo enviado desde formulario";
+        $for = "juanjoinkor@gmail.com";
+        $from = "juadrigarciagonzalez@gmail.com";
+        Mail::send("email", $request->all(), function($msg) use($subject, $for, $from){
+            $msg->from($from, $from);
             $msg->subject($subject);
             $msg->to($for);
         });
